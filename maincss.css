@@ -1,0 +1,12 @@
+.changer {
+     display: block;
+}
+.btn {
+     display: inline;
+     width: 23px;
+     height: 15px;
+     color: red;
+}
+.bat {
+     display: none;
+}

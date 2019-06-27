@@ -8,26 +8,30 @@ window.onload = function start() {
   textarea.oninput = function st() {
     form.lastElementChild.innerHTML = textarea.value;
     if (form.lastElementChild.innerHTML.match(reg)) {
-      const htag = form.lastElementChild.innerHTML.match(reg);
-      const h1 = document.createElement('h1');
-      h1.innerHTML = htag;
-      form.lastElementChild.innerHTML = form.lastElementChild.innerHTML.replace(htag, ' ');
-      form.lastElementChild.appendChild(h1);
-      const div = document.createElement('span');
-      form.appendChild(div);
-      textarea.value = null;
-    } else if (form.lastElementChild.innerHTML.match(bold)) {
+      let lena = form.lastElementChild.innerHTML.match(reg).length 
+      for (let i = 0; i < lena; i += 1) {
+        console.log(form.lastElementChild.innerHTML.match(reg)[i]);
+    let htag = form.lastElementChild.innerHTML.match(reg)[i].split('');
+    htag.shift();
+    htag = htag.join('')
+    console.log(form.lastElementChild.innerHTML.match(reg)[i])
+    console.log(htag)
+    form.lastElementChild.innerHTML = form.lastElementChild.innerHTML.replace(form.lastElementChild.innerHTML.match(reg)[i], `<h1>${htag}</h1>`);
+    form.lastElementChild.innerHTML.match(reg)[i]= '';
+    
+      }
+    }
+     /* else if (form.lastElementChild.innerHTML.match(bold)) {
       form.lastElementChild.innerHTML = form.lastElementChild.innerHTML.replace(form.lastElementChild.innerHTML.match(bold)[0], '');
       const bolid = document.createElement('b');
       let correctBolid = textarea.value.match(bold)[0].split('');
-      correctBolid = correctBolid.splice(2, 2);
-      correctBolid = correctBolid.join('');
+      correctBolid = correctBolid.splice(2, 2).join('');
       bolid.innerHTML = textarea.value.match(correctBolid);
       form.lastElementChild.appendChild(bolid);
       const span = document.createElement('span');
       form.appendChild(span);
       textarea.value = null;
-    }
+    }*/
   };// 1 практическое задание
 
   const input1 = document.getElementsByClassName('input1');
@@ -41,12 +45,13 @@ window.onload = function start() {
     if (input.value.match(dogSymbol) && input.value.match(dotSymbol)) {
       let li = document.createElement('li');
       li.className = `${t}`;
-      li.innerHTML = `${input.value} <input type="button" value="X" id = "${t}" class= "btn">`;
+      li.innerHTML = `${input.value} <input type="button" value="X" id="${t}" class="btn">`;
       t += 1;
       list.appendChild(li);
       input.value = null;
       const button1 = document.getElementsByClassName('btn');
       const button = button1[0];
+      
       for (let l = 0; l < button1.length; l += 1) {
         button1[l].onclick = function remove() {
           let listli = document.getElementsByTagName('li')

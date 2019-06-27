@@ -10,3 +10,26 @@
 .bat {
      display: none;
 }
+.input_text {
+     width: 250px;
+}
+.left_side {
+     width: 600px;
+}
+.left_side {
+     display: flex;
+     flex-direction: row;
+}
+.list {
+     margin-top: 0px;
+}
+.righ_side, .righ_side_text {
+     width: 300px;
+}
+.righ_side {
+     display: flex;
+     flex-direction: column;
+}
+.li {
+     
+}

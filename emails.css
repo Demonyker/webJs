@@ -1,0 +1,64 @@
+body {
+    background: #F0F8FF;
+}
+.emails{
+    margin: 0 auto;
+    width: 500px;
+}
+.emails p {
+    color: pink;
+    font-size: 40pt;
+    margin-left: 40px;
+    margin-bottom: -1px;
+}
+.input1 {
+    width: 300px;
+    height: 40px;
+    border: solid 1px;
+}
+::-webkit-input-placeholder { 
+    font-style: italic; 
+    color: #D3D3D3;
+}
+.email {
+    position: relative;
+    width: 302px;
+    background: white;
+    list-style-type: none;
+    bottom: 16px;
+    height: 25px;;
+    border: solid 1px;
+}
+.email::before {
+    content: "○";
+    padding-right: 10px;
+}
+.listformemails {
+    padding-left: 0px;
+}
+input {
+    outline:none;
+}
+input:active {
+    outline:none;
+}
+input:focus {
+    outline:none;
+}
+.btn {
+    float: right;
+    color: red;
+    background: white;
+    border: none;
+}
+.number_of_emails {
+    position: relative;
+    display: none;
+    width: 302px;
+    background: white;
+    height: 25px;;
+    border: solid 1px;
+    bottom: 33px;
+    font-size: 10pt;
+    color: #808080;
+}

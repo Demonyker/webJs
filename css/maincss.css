@@ -20,6 +20,8 @@
      display: flex;
      flex-direction: row;
      width: 1001px;
+     border:solid 1px;
+     height: 250px;
 }
 .left_side__title, .right_side__title  {
      background-color: white;
